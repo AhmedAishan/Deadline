@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* font-family: ; */
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+:root {
+  --black: #000000;
+
+  --white: #fff;
+
+  --text-grey: #808080;
+}
+
+/* Util */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
