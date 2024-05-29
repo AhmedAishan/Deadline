@@ -5,9 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deadline</title>
 
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <form action="#" id="form">
+      <label for="event">
+        Event name:
+        <input type="text" id="event" required />
+      </label>
+
+      <label for="date">
+        Event name:
+        <input type="date" id="date" required />
+      </label>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div class="event-display">
+      <h3 class="event-head">exam</h3>
+      <div class="tick">300 days</div>
+    </div>
+  </body>
 </html>
