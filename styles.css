@@ -52,6 +52,7 @@ input:focus {
   visibility: hidden;
 }
 
+/* form */
 h1 {
   color: var(--green);
   font-size: 10rem;
@@ -70,6 +71,15 @@ form input {
 
 form input {
   font-size: 3rem;
+}
+
+.time {
+  display: flex;
+  gap: 1rem;
+}
+
+.time input {
+  width: 5rem;
 }
 
 form input[type='submit'] {

@@ -31,6 +31,19 @@
         <input type="date" id="date" required />
       </label>
 
+      <div class="time">
+        Time:
+        <label for="hours">
+          <input type="number" id="hours" min="0" max="23" required />
+        </label>
+        <label for="minutes">
+          <input type="number" id="minutes" min="0" max="60" required />
+        </label>
+        <label for="seconds">
+          <input type="number" id="seconds" min="0" max="60" required />
+        </label>
+      </div>
+
       <input type="submit" value="Submit" />
     </form>
 
