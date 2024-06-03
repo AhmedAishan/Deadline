@@ -31,25 +31,30 @@
         <input type="date" id="date" required />
       </label>
 
-      <div class="time">
-        Time:
-        <label for="hours">
-          <input type="number" id="hours" min="0" max="23" required />
-        </label>
-        <label for="minutes">
-          <input type="number" id="minutes" min="0" max="60" required />
-        </label>
-        <label for="seconds">
-          <input type="number" id="seconds" min="0" max="60" required />
-        </label>
+      <div class="time-field">
+        <p>Time:</p>
+        <div class="time">
+          <label for="hours">
+            <input type="number" id="hours" min="0" max="23" required />
+          </label>
+          <div>&#58;</div>
+          <label for="minutes">
+            <input type="number" id="minutes" min="0" max="60" required />
+          </label>
+          <div>&#58;</div>
+
+          <label for="seconds">
+            <input type="number" id="seconds" min="0" max="60" required />
+          </label>
+        </div>
       </div>
 
-      <input type="submit" value="Submit" />
+      <input type="submit" value="start countdown" />
     </form>
 
     <div class="event-display">
-      <h3 class="event-head">exam</h3>
-      <div class="tick">300 days</div>
+      <h3 class="event-head"></h3>
+      <div class="tick"></div>
     </div>
   </body>
 </html>

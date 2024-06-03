@@ -9,8 +9,13 @@ const secondsVal = document.getElementById('seconds');
 const eventHead = document.querySelector('.event-head');
 const eventTime = document.querySelector('.tick');
 
+const CountdownBox = document.querySelector('.event-display');
+
 eventForm.addEventListener('submit', function (e) {
   e.preventDefault();
+
+  // display box
+  CountdownBox.style.display = 'flex';
 
   console.log(hoursVal.value, minutesVal.value, secondsVal.value);
 
@@ -41,11 +46,8 @@ eventForm.addEventListener('submit', function (e) {
     // display countdown
     eventTime.innerText = `${Math.round(
       Math.abs(remainingTime.days)
-    )} : ${Math.floor(remainingTime.hours)} : ${Math.floor(
-      remainingTime.minutes
+    )} : ${Math.floor(Math.abs(remainingTime.hours))} : ${Math.floor(
+      Math.abs(remainingTime.minutes)
     )} : ${Math.floor(Math.abs(remainingTime.seconds))}`;
   }, 1000);
-
-  console.log(remainingTime.hours);
-  // if()
 });
