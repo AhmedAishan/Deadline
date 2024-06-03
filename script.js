@@ -14,10 +14,11 @@ const CountdownBox = document.querySelector('.event-display');
 eventForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // display box
-  CountdownBox.style.display = 'flex';
+  // hide form
+  eventForm.classList.add('hidden');
 
-  console.log(hoursVal.value, minutesVal.value, secondsVal.value);
+  // display box
+  setTimeout(() => (CountdownBox.style.display = 'flex'), 2000);
 
   // setting the event title
   eventHead.innerText = eventVal.value;
@@ -43,8 +44,17 @@ eventForm.addEventListener('submit', function (e) {
       seconds: (calcDifference() / 1000) % 60,
     };
 
+    // formating strings
+    const days = `${calcDifference() / (1000 * 60 * 60 * 24)}`.padStart(2, 0);
+    const hours = `${(calcDifference() / (1000 * 60 * 60)) % 24}`.padStart(
+      2,
+      0
+    );
+    const minutes = `${(calcDifference() / (1000 * 60)) % 60}`.padStart(2, 0);
+    const seconds = `${(calcDifference() / 1000) % 60}`.padStart(2, 0);
+
     // display countdown
-    eventTime.innerText = `${Math.round(
+    eventTime.innerText = `${Math.trunc(
       Math.abs(remainingTime.days)
     )} : ${Math.floor(Math.abs(remainingTime.hours))} : ${Math.floor(
       Math.abs(remainingTime.minutes)
