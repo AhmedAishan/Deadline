@@ -17,14 +17,14 @@ eventForm.addEventListener('submit', function (e) {
   // setting the event title
   eventHead.innerText = eventVal.value;
 
-  setInterval(function () {
-    // future (input date field value)
-    const futureDate = new Date(dateVal.value);
-    futureDate.setHours(hoursVal.value);
-    futureDate.setMinutes(minutesVal.value);
-    futureDate.setSeconds(secondsVal.value);
+  // future (input date field value)
+  const futureDate = new Date(dateVal.value);
+  futureDate.setHours(hoursVal.value);
+  futureDate.setMinutes(minutesVal.value);
+  futureDate.setSeconds(secondsVal.value);
 
-    // time right now
+  setInterval(function () {
+    // time now
     const currentDate = new Date();
 
     // calculate difference
@@ -45,4 +45,7 @@ eventForm.addEventListener('submit', function (e) {
       remainingTime.minutes
     )} : ${Math.floor(Math.abs(remainingTime.seconds))}`;
   }, 1000);
+
+  console.log(remainingTime.hours);
+  // if()
 });
